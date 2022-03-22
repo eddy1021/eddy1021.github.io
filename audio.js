@@ -140,6 +140,7 @@ class AudioTest {
     }
 
     start() {
+        console.log(this.constraints)
         navigator.mediaDevices.getUserMedia({audio: this.constraints})
             .then(this.createAudioContext.bind(this))
             .then(this.createWorkletNode.bind(this))
